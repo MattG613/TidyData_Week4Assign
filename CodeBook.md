@@ -18,12 +18,47 @@ The files from the zip file need to be extracted into the working directory for 
 script to work.  The data itself was read in directly from those files.
 
 
+## Information from the original data set
+==================================================================
+Human Activity Recognition Using Smartphones Dataset
+Version 1.0
+==================================================================
+Jorge L. Reyes-Ortiz, Davide Anguita, Alessandro Ghio, Luca Oneto.
+Smartlab - Non Linear Complex Systems Laboratory
+DITEN - Università degli Studi di Genova.
+Via Opera Pia 11A, I-16145, Genoa, Italy.
+activityrecognition@smartlab.ws
+www.smartlab.ws
+==================================================================
+
+The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. 
+
+The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain. See 'features_info.txt' for more details. 
+
+For each record it is provided:
+======================================
+
+- Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration.
+- Triaxial Angular velocity from the gyroscope. 
+- A 561-feature vector with time and frequency domain variables. 
+- Its activity label. 
+- An identifier of the subject who carried out the experiment.
+
+Notes: 
+======
+- Features are normalized and bounded within [-1,1].
+- Each feature vector is a row on the text file.
+
+For more information about this dataset contact: activityrecognition@smartlab.ws
+
+
+
 ## Import the files into a large data set
 
 To make the large data set, the data was taken from x_test.txt and x_train.txt, the activity labels were taken from y_test.txt and y_train.txt (and then converted to the text values found in activity_labels.txt), and the subject information was taken from subject_test.txt and subject_train.txt text files.  The variables names of each column from x_test.txt and x_train.txt were taken from features.txt.  All of this was combined into one data frame.
 
 
-## Data selection and manipulation
+## Data selection and manipulation for this assignment
 
 After this large data set was constructed, the data involving mean and standard
 deviation were extracted as discussed. The names of all variables can be found in the web link above.  For this script, only the mean and standard deviation variables were used, and these are listed below:
@@ -114,7 +149,7 @@ After these variables were selected from the overall data set, the mean of each 
 
 
 
-## Variable names, labels, information
+## Variable names, labels, information from the run_Analysis.R script
 
 features - 561 obs. of 2 variables
         names for the columns in the x_test and x_train text files
